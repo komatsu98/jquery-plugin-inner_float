@@ -2,38 +2,43 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            <title>
+                Plugin
+            </title>
+        </meta>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
             </script>
             <script src="js.js" type="text/javascript">
             </script>
-            <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" rel="stylesheet">
-                <title>
-                    Plugin
-                </title>
-                <style>
-                    body{margin:0;}
-    	#par {
-    		height:100px;
-    		width: 30px;
-    		background: #dddddd;
-    	}
-    	#el {
-    		height:30px;
-    		width:30px;
-    		background: #888888;
-    	}
-                </style>
-            </link>
-        </meta>
+            <link rel="stylesheet" href="css.css">
     </head>
     <body>
-        <div style="height:100px">
-        </div>
-        <div id="par">
-            <div id="el">
+        <div class="wraper">
+            <div class="main h2000 bg-green">
+                Phần chính trang web
+                <br/>
+                Phần chính trang web
+                <br/>
+                Phần chính trang web
+                <br/>
+                Phần chính trang web
+                <br/>
+                Phần chính trang web
+                <br/>
             </div>
-        </div>
-        <div style="height:600px">
+            <div class="right-side-bar">
+                <div class="adv h100 bg-blue">
+                    Nội dung gì đó
+                </div>
+                <div class="adv h500 bg-yellow">
+                    <div class="abv-img bg-red" id="almost-show">
+                        Khối này nên được áp dụng plugin để hiển thị khi div cha còn hiển thị
+                    </div>
+                </div>
+                <div class="adv h100 bg-blue">
+                    Khi kéo lên, khối cha dần ẩn đi thì khối con cũng bị kéo theo
+                </div>
+            </div>
         </div>
     </body>
 </html>

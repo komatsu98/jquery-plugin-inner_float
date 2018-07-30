@@ -1,5 +1,4 @@
 //jQuery plugin
-
 (function($) {
     $.fn.inner_float = function(options) {
         var settings = $.extend({
@@ -8,8 +7,8 @@
         var el = this;
         //fixed property will lose width sometimes
         var width = el.width();
-        var par = $(this).parent("div");
-        var bot_pos = parseInt(par.height()) + par.offset().top;
+        var par = $(this).parent();
+        var bot_pos = par.height() + par.offset().top;
         var top_pos = el.offset().top;
         $(document).scroll(function() {
             if ($(document).scrollTop() <= top_pos - parseInt(settings.top)) {
@@ -27,22 +26,26 @@
                     'position': "fixed",
                     'width': width
                 })
-            } 
-            else {
-                console.log(3);
-                $(el).css({
-                    'top': bot_pos - parseInt(el.height()),
-                    'position': "absolute",
-                })
+            } else {
+                //if par has position: relative
+                if ($(par).css('position') == 'relative') {
+                    $(el).css({
+                        'bottom': 0,
+                        'position': "absolute",
+                    })
+                } else {
+                	$(el).css({
+                        'top': bot_pos - el.height(),
+                        'position': "absolute",
+                    })
+                }
             }
         })
     }
 }(jQuery));
-
 //
-
 $(document).ready(function() {
-    $("#el").inner_float({
+    $("#almost-show").inner_float({
         top: "10px",
     });
 });
