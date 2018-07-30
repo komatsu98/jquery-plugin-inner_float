@@ -8,7 +8,7 @@ Thực hiện bởi [Hồ  Anh Tiến](https://github.com/komatsu98)
 
 ## Liên kết
 
-- [https://github.com/colombo-trainee/trainee_2018/blob/master/frontend/jquery_plugin.md)
+- [Đề bài](https://github.com/colombo-trainee/trainee_2018/blob/master/frontend/jquery_plugin.md)
 - [Link](https://jsfiddle.net/tienha98/wgxft7o4/1/)
 
 ## Kiến thức nắm được
